@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project XYZ</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Overview</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Project XYZ</h1>
-      <p>A deep dive into my amazing project.</p>
-    </header>
-
-    <section class="overview">
-      <h2>Overview</h2>
-      <p>This project solves XYZ by doing ABC...</p>
-    </section>
-
-    <section class="features">
-      <h2>Features</h2>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <h2>Project Overview</h2>
       <ul>
-        <li>Feature 1</li>
-        <li>Feature 2</li>
-        <li>Feature 3</li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#development">Development</a></li>
+        <li><a href="#result">Result</a></li>
+        <li><a href="#improvements">Future Improvements</a></li>
       </ul>
-    </section>
+    </nav>
 
-    <section class="tech-stack">
-      <h2>Technology Stack</h2>
-      <p>Built with HTML, CSS, JavaScript...</p>
-    </section>
+    <!-- Main Content -->
+    <main class="content">
+      <section id="overview">
+        <h1>Project Overview</h1>
+        <p>This section provides an overview of the project and its goals...</p>
+      </section>
 
-    <footer>
-      <p>Check out more of my work on <a href="https://your-github-username.github.io">My Portfolio</a>.</p>
-    </footer>
+      <section id="features">
+        <h1>Features</h1>
+        <ul>
+          <li>Feature 1: Description...</li>
+          <li>Feature 2: Description...</li>
+        </ul>
+      </section>
+
+      <section id="development">
+        <h1>Development</h1>
+        <p>Details on the development process, including technologies used...</p>
+      </section>
+
+      <section id="result">
+        <h1>Result</h1>
+        <p>A summary of the results and outcomes of the project...</p>
+      </section>
+
+      <section id="improvements">
+        <h1>Future Improvements</h1>
+        <p>Possible improvements and additional features for the future...</p>
+      </section>
+    </main>
   </div>
+
+  <script>
+    // Smooth scrolling functionality for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
