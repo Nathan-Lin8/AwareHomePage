@@ -4,6 +4,7 @@ body, html {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  overflow-x: none;
 }
 
 /* Container for the page layout */
@@ -43,12 +44,13 @@ body, html {
   height: 100vh;
   transition: transform 0.3s ease-in-out;
   z-index: 900;
+  border-right: 1px solid #ddd; /* Optional top border for separation */
 }
 
 .close-btn {
   display: none; /* Hidden on desktop */
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 10px;
   font-size: 24px;
   cursor: pointer;
@@ -254,6 +256,7 @@ body, html {
 
   .sidebar {
     transform: translateX(-100%); /* Hide sidebar initially */
+    border-right: none;
     overflow-x: hidden;
   }
 
@@ -262,7 +265,7 @@ body, html {
   }
 
   .content {
-    padding: 20px 10px;
+    padding: 40px 16px;
     margin-left: 24px;
   }
 
@@ -270,16 +273,24 @@ body, html {
     align-items: flex-start;
   }
 
+  .content h1 {
+    font-size: 28px;
+  }
+
   .title-container {
     background-color: #FEFF9C;
     position: relative;
-    height: 180px;
-    width: 250px; /* Fixed width */
+    height: 150px;
+    width: 200px; /* Fixed width */
     display: flex;
     align-items: flex-end;
     justify-content: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 60px; /* Optional: Add some spacing from the top */
+  }
+
+  .title-container h2{
+    margin-top: 20px;
   }
   
 }
