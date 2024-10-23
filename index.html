@@ -128,21 +128,25 @@
     const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('sidebar');
 const closeBtn = document.getElementById('closeBtn');
+const content = document.querySelector('.content');
 
-// Show sidebar when hamburger icon is clicked (mobile only)
+// Show sidebar and blur content when hamburger icon is clicked (mobile only)
 hamburger.addEventListener('click', () => {
   sidebar.style.transform = 'translateX(0)';
+  content.classList.add('blur');
 });
 
-// Close sidebar when 'X' button is clicked (mobile only)
+// Close sidebar and remove blur when 'X' button is clicked (mobile only)
 closeBtn.addEventListener('click', () => {
   sidebar.style.transform = 'translateX(-100%)';
+  content.classList.remove('blur');
 });
 
 // Ensure sidebar is visible on desktop when resizing the window
 window.addEventListener('resize', () => {
   if (window.innerWidth > 480) {
-    sidebar.style.transform = 'translateX(0)'; // Ensure sidebar is shown
+    sidebar.style.transform = 'translateX(0)';
+    content.classList.remove('blur'); // Remove blur on desktop
   }
 });
 

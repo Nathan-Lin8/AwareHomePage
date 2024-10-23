@@ -55,6 +55,12 @@ body, html {
   z-index: 1001; /* Ensure it stays above other elements */
 }
 
+/* Blurred background effect */
+.blur {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
 .title-container {
   background-color: #FEFF9C;
   position: relative;
